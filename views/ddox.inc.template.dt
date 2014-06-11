@@ -7,7 +7,7 @@
 		h2 Arguments
 
 		pre.code.prettyprint.lang-d.prototype
-			|template #{item.name}#{item.templateArgsString};
+			|template #{item.name}#{item.templateArgsString}#{item.constraintString};
 
 - void outputTemplateMembers(TemplateDeclaration item)
 	- alias TypeTuple!(FunctionDeclaration, InterfaceDeclaration, ClassDeclaration, StructDeclaration, UnionDeclaration, EnumDeclaration, AliasDeclaration, TemplateDeclaration) kinds;

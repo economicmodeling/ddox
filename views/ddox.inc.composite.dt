@@ -28,6 +28,10 @@
 					li
 						code.prettyprint.lang-d!= info.formatType(intf)
 
+	h3 Declaration
+		pre.code.prettyprint.lang-d.prototype
+			|(class )#{item.name}#{item.templateArgsString}#{item.constraintString}
+
 
 - void outputCompositeMembers(CompositeTypeDeclaration item)
 	- alias TypeTuple!(InterfaceDeclaration, ClassDeclaration, StructDeclaration, UnionDeclaration, EnumDeclaration, AliasDeclaration, TemplateDeclaration) kinds;

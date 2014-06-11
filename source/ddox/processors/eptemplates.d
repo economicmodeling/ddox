@@ -27,6 +27,7 @@ void mergeEponymousTemplates(Package root)
 					templ.members[idx].parent = templ.parent;
 					templ.members[idx].docGroup = templ.docGroup;
 					templ.members[idx].inheritingDecl = templ.inheritingDecl;
+					templ.members[idx].constraint = templ.constraint;
 					foreach( ref m; templ.docGroup.members )
 						if( m is templ ) m = templ.members[idx];
 					d = templ.members[idx];

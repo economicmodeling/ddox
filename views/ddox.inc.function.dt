@@ -29,6 +29,6 @@
 					|!{rettype}#{proto.name}#{proto.templateArgsString}(
 					- foreach (size_t i, p; proto.parameters)
 						|&nbsp;&nbsp;!{info.formatType(p.type, false)} #{p.name}#{i+1 < proto.parameters.length ? "," : ""}
-					|)#{attribsstr};
+					|)#{attribsstr}#{proto.constraintString};
 				- else
-					|!{rettype}#{proto.name}#{proto.templateArgsString}()#{attribsstr};
+					|!{rettype}#{proto.name}#{proto.templateArgsString}()#{attribsstr}#{proto.constraintString};

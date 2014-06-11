@@ -244,6 +244,9 @@ class Declaration : Entity {
 	bool isTemplate;
 	TemplateParameterDeclaration[] templateArgs;
 
+	@property string constraintString() { return constraint is null ? "" : " if (" ~ constraint ~ ")"; }
+	string constraint;
+
 	override @property string kindCaption() const { return "Declaration"; }
 	abstract @property Declaration dup();
 	abstract @property DeclarationKind kind();

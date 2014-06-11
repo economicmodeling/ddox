@@ -312,6 +312,9 @@ private struct Parser
 			}
 			ret.templateArgs ~= new TemplateParameterDeclaration(ret, argstr);
 		}
+		if( "constraint" in json ){
+			ret.constraint = json.constraint.get!string;
+		}
 		ret.members = parseDeclList(json.members, ret);
 		return ret;
 	}
